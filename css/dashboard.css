@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --border: .1rem solid rgba(255,255,255,.3); /* Inherited */
+    --heading-color: black; /* Added */
+    --text-color: black; /* Added */
+    --primary-color: rgb(158, 158, 216); /* Added based on your theme */
+    --secondary-color: #4f3b34; /* Added based on your theme */
+    --light-bg: #eee; /* Added */
+    --white: #fff; /* Added */
+    --black: #000; /* Added */
+}
+
+*{
+    font-family: "Nunito", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html ::-webkit-scrollbar-thumb{
+    background: var(--white);
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+}
+
+body {
+    font-family: sans-serif; /* Overridden by the * rule */
+    margin: 0; /* Inherited */
+    padding: 0; /* Inherited */
+    background-color: #f4f4f4; /* Different from your main style */
+    color: #333; /* Different from your main style */
+}
+
+.header{
+    background: var(--white); /* Changed */
+    display: flex; /* Inherited */
+    align-items: center; /* Inherited */
+    justify-content: space-between; /* Inherited */
+    padding: 1.5rem 7%; /* Adjusted padding */
+    border-bottom: 1px solid #eee; /* Inherited */
+    position: fixed; /* Inherited */
+    top: 0; left: 0; right: 0; /* Inherited */
+    z-index: 1000; /* Inherited */
+}
+
+.header .logo img{
+    width: 20rem; /* Matches your main style */
+}
+
+.logo a {
+    color: var(--white); /* From your dashboard style */
+    text-decoration: none; /* Inherited */
+    font-size: 1.5rem; /* From your dashboard style */
+    font-weight: bold; /* From your dashboard style */
+}
+
+.header .navbar a{
+    margin: 0.8rem; /* Inherited */
+    font-size: 1.6rem; /* Inherited */
+    color: var(--text-color); /* Changed */
+}
+
+.header .navbar a:hover{
+    color: var(--secondary-color); /* Changed */
+    border-bottom: 0.1rem solid var(--secondary-color); /* Changed */
+    padding-bottom: 0.5rem; /* Inherited */
+}
+
+.login-btn{
+    padding: 10px 22px; /* Inherited */
+    background-color: transparent; /* Inherited */
+    border: 1px solid #141211; /* Inherited */
+    border-radius: 50px; /* Inherited */
+    font-family: "Ubuntu Sans Mono", monospace; /* Inherited */
+    font-size: 1.6rem; /* Inherited */
+    color: #141211; /* Inherited */
+    text-decoration: none; /* Inherited */
+    box-shadow: 0 0 0; /* Inherited */
+    transition: all 200ms; /* Inherited */
+}
+
+.login-btn:hover{
+    transform: translateY(-10px); /* Inherited */
+    box-shadow: 0px 12px 1px black; /* Inherited */
+}
+.header .icons div{
+    color: var(--black); /* Changed */
+    cursor: pointer; /* Inherited */
+    font-size: 2.5rem; /* Inherited */
+    margin-left: 2rem; /* Inherited */
+
+}
+
+.header .icons div:hover{
+    color: green;
+}
+
+#menu-btn{
+    display: none; /* Inherited */
+}
+
+.header .search-form{
+    position: absolute; /* Inherited */
+    top: 115%; /* Inherited */
+    right: 7%; /* Inherited */
+    background: transparent; /* Inherited */
+    width: 50rem; /* Inherited */
+    height: 5rem; /* Inherited */
+    display: flex; /* Inherited */
+    align-items: center; /* Inherited */
+    transform: scaleY(0); /* Inherited */
+    -webkit-transform: scaleY(0); /* Inherited */
+    -moz-transform: scaleY(0); /* Inherited */
+    -ms-transform: scaleY(0); /* Inherited */
+    -o-transform: scaleY(0); /* Inherited */
+    transform-origin: top; /* Inherited */
+}
+
+.header .search-form.active{
+    transform: scaleY(1); /* Inherited */
+
+}
+
+.header .search-form input{
+    height: 100%; /* Inherited */
+    width: 100%; /* Inherited */
+    font-size: 1.6rem; /* Inherited */
+    color: var(--text-color); /* Changed */
+    padding: 1rem; /* Inherited */
+    text-transform: none; /* Inherited */
+}
+
+.header .search-form label{
+    cursor: pointer; /* Inherited */
+    font-size: 2.2rem; /* Inherited */
+    margin-right: 1.5rem; /* Inherited */
+    color: var(--text-color); /* Changed */
+    right: 10px; /* Inherited */
+    position: absolute; /* Inherited */
+}
+
+.header .search-form label:hover{
+    color: red;
+}
+
+section{
+    padding: 2rem 7%; /* Adjusted padding */
+}
+
+.heading{
+    text-align: center; /* Inherited */
+    color: var(--heading-color); /* Changed */
+    text-transform: uppercase; /* Inherited */
+    padding-bottom: 3.5rem; /* Inherited */
+    font-size: 4rem; /* Inherited */
+}
+
+.heading span{
+    color: var(--primary-color); /* Changed */
+    text-transform: uppercase; /* Inherited */
+}
+
+.btn{
+    margin-top: 1rem; /* Inherited */
+    display: inline-block; /* Inherited */
+    padding:.9rem 3rem; /* Inherited */
+    font-size: 1.7rem; /* Inherited */
+    color: var(--white); /* Changed */
+    background-color: var(--black); /* Changed */
+    cursor: pointer; /* Inherited */
+}
+
+.btn:hover{
+    background-color: #234568; /* Inherited */
+    cursor: pointer; /* Inherited */
+}
+
+/* Media Queries (Inherited and Adjusted) */
+
+@media (max-width: 991px){
+    html{
+        font-size: 55%; /* Inherited */
+    }
+    .header{
+        padding: 1.5rem 2rem; /* Inherited */
+    }
+    section{
+        padding: 2rem; /* Inherited */
+    }
+}
+
+@media (max-width: 768px){
+   #menu-btn{
+        display: inline-block; /* Inherited */
+   }
+
+   .header .navbar{
+        position: absolute; /* Inherited */
+        top: 100%; right: -100%; /* Inherited */
+        background: var(--light-bg); /* Changed */
+        width: 30rem; /* Inherited */
+        height: calc(100vh - 9.5rem); /* Inherited */
+   }
+
+   .header .navbar a{
+        display: block; /* Inherited */
+        color: var(--text-color); /* Changed */
+        margin: 1.5rem; /* Inherited */
+        padding: .5rem; /* Inherited */
+        font-size: 2rem; /* Inherited */
+   }
+
+   .header .navbar.active{
+        right: 0; /* Inherited */
+   }
+
+    .header .search-form{
+        width: 90%; /* Inherited */
+        right: 2rem; /* Inherited */
+    }
+    .home{
+        background-position: left; /* Inherited */
+        justify-content: center; /* Inherited */
+        text-align: center; /* Inherited */
+    }
+    .home .content h3{
+        font-size: 4.5rem; /* Inherited */
+    }
+    .home .content p{
+        font-size: 2.5rem; /* Inherited */
+        padding-left: 40px; /* Inherited */
+        margin: 0 auto; /* Inherited */
+    }
+
+    .video iframe{
+        width: auto; /* Inherited */
+        height: auto; /* Inherited */
+    }
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%; /* Inherited */
+    }
+}
+
+/* Dashboard Specific Styles (Added) */
+.container {
+    max-width: 1200px; /* Inherited */
+    margin: 2rem auto; /* Inherited */
+    padding: 2rem; /* Inherited */
+    background-color: var(--white); /* Changed */
+    border-radius: 8px; /* Inherited */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Inherited */
+}
+
+.section-heading {
+    font-size: 2rem; /* Inherited */
+    color: var(--heading-color); /* Changed */
+    margin-bottom: 1.5rem; /* Inherited */
+    border-bottom: 2px solid #ccc; /* Inherited */
+    padding-bottom: 0.5rem; /* Inherited */
+    text-align: left; /* Added for dashboard */
+}
+
+.home-dashboard {
+    padding: 2rem 0; /* Added for spacing */
+}
+
+.home-dashboard h1 {
+    font-size: 2.5rem; /* Added for dashboard */
+    color: var(--heading-color); /* Changed */
+    margin-bottom: 1rem; /* Added for dashboard */
+}
+
+.home-dashboard p {
+    font-size: 1.6rem; /* Added for dashboard */
+    color: var(--text-color); /* Changed */
+    line-height: 1.8; /* Added for dashboard */
+}
+
+.dashboard-nav {
+    /* You might want to style this differently for the dashboard */
+    display: flex;
+    gap: 1rem;
+}
+
+.dashboard-nav a {
+    color: var(--white); /* Inherited */
+    background-color: var(--secondary-color); /* Added dashboard specific */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.dashboard-nav a:hover {
+    background-color: var(--primary-color); /* Added dashboard specific */
+    text-decoration: none; /* Inherited */
+}
+
+.video-container {
+    margin-bottom: 2rem; /* Inherited */
+}
+
+.video-container iframe {
+    width: 100%; /* Inherited */
+    max-height: 500px; /* Inherited */
+    border: 0; /* Inherited */
+}
+
+.about-content,
+.contact-info,
+.blog-links {
+    margin-bottom: 1.5rem; /* Inherited */
+    color: var(--text-color); /* Changed */
+    font-size: 1.6rem; /* Added for consistency */
+    line-height: 1.8; /* Added for readability */
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem; /* Inherited */
+}
+
+.contact-info a {
+    color: var(--primary-color); /* Added for emphasis */
+    text-decoration: underline;
+}
+
+.blog-links ul {
+    list-style: none; /* Inherited */
+    padding: 0; /* Inherited */
+}
+
+.blog-links ul li {
+    margin-bottom: 0.3rem; /* Inherited */
+}
+
+.blog-links ul li a {
+    color: var(--primary-color); /* Added for emphasis */
+}
+
+.footer {
+    text-align: center; /* Inherited */
+    padding: 1rem 0; /* Inherited */
+    background-color: var(--secondary-color); /* Changed */
+    color: var(--white); /* Changed */
+    position: fixed; /* Inherited */
+    bottom: 0; /* Inherited */
+    width: 100%; /* Inherited */
+}
+
+.footer .credits {
+    font-size: 1.6rem; /* Inherited */
+    color: var(--white); /* Changed */
+    font-weight: lighter; /* Inherited */
+    padding: 1.5rem; /* Inherited */
+}
+
+.footer .credits span {
+    color: var(--primary-color); /* Changed */
+}

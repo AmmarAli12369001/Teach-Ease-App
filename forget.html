@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="icon" type="image/png" href="./images/title logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(90deg, #E2E2E2,  #cfdaf7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 850px;
+            height: 550px;
+            background: #fff;
+            margin: 20px;
+            border-radius: 30px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #234568;
+            margin-bottom: 15px;
+        }
+        .method-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        .method-container label {
+            padding: 10px 15px;
+            border: 2px solid  #01254a;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #fff;
+            transition: 0.3s;
+        }
+        input[name="reset-method"] {
+            display: none;
+        }
+        input[name="reset-method"]:checked + label {
+            background-color: #234568;
+            color: white;
+        }
+        .input-container {
+            width: 100%;
+            text-align: center;
+        }
+        .input-container input {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid  #022242;
+            border-radius: 5px;
+            outline: none;
+            font-size: 14px;
+            display: none;
+        }
+        button {
+            background-color: #234568;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #4e68ae;
+        }
+        a {
+            display: block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #234568;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+            @media screen and (max-width: 650px){
+                .container{ 
+                    height: calc(100vh - 80px);
+                    width: 80%;
+                
+                }
+            }
+
+    </style>
+    <script>
+        function toggleInput() {
+            var emailInput = document.getElementById("email");
+            var phoneInput = document.getElementById("phone");
+            if (document.getElementById("email-option").checked) {
+                emailInput.style.display = "block";
+                phoneInput.style.display = "none";
+            } else {
+                emailInput.style.display = "none";
+                phoneInput.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Forgot Password</h2>
+        <p>Select a method to reset your password</p>
+        <div class="method-container">
+            <input type="radio" id="email-option" name="reset-method" onclick="toggleInput()" checked>
+            <label for="email-option">Email</label>
+            <input type="radio" id="phone-option" name="reset-method" onclick="toggleInput()">
+            <label for="phone-option">Phone</label>
+        </div>
+        <div class="input-container">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+        </div>
+        <button type="submit">Reset Password</button>
+        <a href="login.html">Back to Login</a>
+    </div>
+    <script>
+        toggleInput(); // Ensure correct input is displayed on page load
+    </script>
+</body>
+</html>
